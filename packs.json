@@ -1,3 +1,259 @@
 {
-  "packs": []
+  "packs": [
+    {
+      "schema": 1,
+      "id": "hsr",
+      "rev": 2,
+      "label": "Honkai: Star Rail",
+      "short": "HSR",
+      "windowPattern": "star\\s*rail|honkai[^a-z]*sr\\b|\\bhsr\\b|starrail",
+      "currency": {
+        "name": "Stellar Jade",
+        "perPull": 160
+      },
+      "pullScreen": "Warp",
+      "detector": {
+        "profile": "star-rows",
+        "falseStartTimeout": 30,
+        "bannerEndHits": 10,
+        "revealNeedsBanner": true,
+        "revealMergeGap": 0.6,
+        "revealSplitGap": 0.75
+      },
+      "defaultBanner": "character",
+      "banners": {
+        "character": {
+          "label": "Character Warp",
+          "tab": "Character",
+          "short": "Limited",
+          "hard": 90,
+          "soft": 74,
+          "featuredRate": 0.5,
+          "typicalAvg": 63,
+          "pool": "special",
+          "odds": {
+            "base": 0.006,
+            "softStart": 74,
+            "step": 0.06
+          }
+        },
+        "lightcone": {
+          "label": "Light Cone Warp",
+          "tab": "Light Cone",
+          "short": "Light Cone",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": 0.75,
+          "typicalAvg": 56,
+          "pool": "special",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.07
+          }
+        },
+        "standard": {
+          "label": "Stellar Warp",
+          "tab": "Standard",
+          "short": "Standard",
+          "hard": 90,
+          "soft": 74,
+          "featuredRate": null,
+          "typicalAvg": 63,
+          "pool": "regular",
+          "odds": {
+            "base": 0.006,
+            "softStart": 74,
+            "step": 0.06
+          }
+        },
+        "collab": {
+          "label": "Collab Warp",
+          "tab": "Collab",
+          "short": "Collab",
+          "hard": 90,
+          "soft": 74,
+          "featuredRate": 0.5,
+          "typicalAvg": 63,
+          "pool": "special",
+          "odds": {
+            "base": 0.006,
+            "softStart": 74,
+            "step": 0.06
+          }
+        },
+        "collabcone": {
+          "label": "Collab Light Cone Warp",
+          "tab": "Collab LC",
+          "short": "Collab LC",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": 0.75,
+          "typicalAvg": 56,
+          "pool": "special",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.07
+          }
+        }
+      },
+      "names": {
+        "roster": {
+          "character": [
+            "Ellen",
+            "Astra Yao"
+          ]
+        }
+      }
+    },
+    {
+      "schema": 1,
+      "id": "wuwa",
+      "rev": 2,
+      "label": "Wuthering Waves",
+      "short": "WuWa",
+      "windowPattern": "wuthering|wuwa|client-win64-shipping",
+      "currency": {
+        "name": "Astrite",
+        "perPull": 160
+      },
+      "pullScreen": "Convene",
+      "detector": {
+        "profile": "grid-results",
+        "falseStartTimeout": 12,
+        "resultsScreen": true
+      },
+      "defaultBanner": "character",
+      "banners": {
+        "character": {
+          "label": "Featured Resonator",
+          "tab": "Resonator",
+          "short": "Limited",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": 0.5,
+          "typicalAvg": 56,
+          "pool": "radiant",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.053
+          }
+        },
+        "weapon": {
+          "label": "Featured Weapon",
+          "tab": "Weapon",
+          "short": "Weapon",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": null,
+          "typicalAvg": 56,
+          "pool": "forging",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.053
+          }
+        },
+        "standard": {
+          "label": "Standard Resonator",
+          "tab": "Standard",
+          "short": "Standard",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": null,
+          "typicalAvg": 56,
+          "pool": "lustrous",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.053
+          }
+        },
+        "standardweapon": {
+          "label": "Standard Weapon",
+          "tab": "Std Weapon",
+          "short": "Std Weapon",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": null,
+          "typicalAvg": 56,
+          "pool": "lustrous",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.053
+          }
+        },
+        "reverb": {
+          "label": "Reverb Resonator",
+          "tab": "Reverb",
+          "short": "Reverb",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": 0.5,
+          "typicalAvg": 56,
+          "pool": "radiant",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.053
+          }
+        },
+        "reverbweapon": {
+          "label": "Reverb Weapon",
+          "tab": "Reverb Wpn",
+          "short": "Reverb Wpn",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": null,
+          "typicalAvg": 56,
+          "pool": "forging",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.053
+          }
+        },
+        "collab": {
+          "label": "Collab Resonator",
+          "tab": "Collab",
+          "short": "Collab",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": 0.5,
+          "typicalAvg": 56,
+          "pool": "collab",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.053
+          }
+        },
+        "collabweapon": {
+          "label": "Collab Weapon",
+          "tab": "Collab Wpn",
+          "short": "Collab Wpn",
+          "hard": 80,
+          "soft": 66,
+          "featuredRate": null,
+          "typicalAvg": 56,
+          "pool": "collabweapon",
+          "odds": {
+            "base": 0.008,
+            "softStart": 66,
+            "step": 0.053
+          }
+        }
+      },
+      "names": {
+        "roster": {
+          "character": [
+            "Brant"
+          ]
+        }
+      }
+    }
+  ]
 }
