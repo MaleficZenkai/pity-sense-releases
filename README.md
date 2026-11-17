@@ -46,6 +46,20 @@ Pity Sense ignores everything until you untick it.
 takes back the last change. Every change is kept in a log (the Pull log tab) so you can
 always see where a number came from. You can export the whole history as a spreadsheet.
 
+## Check against the game's own history
+*Live → Fix the numbers → Check with the game's own history…* First open the pull history
+in the game (Star Rail: **Warp → Records**; Wuthering Waves: **Convene → History**), any
+banner. Pity Sense then shows, per banner, the game's pity and 50/50 next to its own and
+offers **Use the game's numbers** if they differ (Undo takes it back).
+
+How it works: when you open the history, the game saves the address of that page in one of
+its own files. Pity Sense reads that file and asks for the same records you see in the
+game (the last 6 months) — the way the well-known trackers do, without a script to paste.
+It never touches the game while it runs and never changes a game file; the address is
+used once and never saved or sent anywhere else. "31+" means no 5★ in those 6 months, so
+at least that many. For Wuthering Waves it only reads the in-game browser's own log; if
+the address isn't there, it tells you rather than digging further.
+
 ## Twitch extras (optional, all off by default)
 Settings → Twitch extras → **Connect Twitch**. Then you can switch on:
 - **Chat commands**: `!pity`, `!luck`, `!5050`, `!bless` (before a pull), `!lucky`.
