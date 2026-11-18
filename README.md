@@ -78,18 +78,28 @@ Settings → Twitch extras → **Connect Twitch**. Then you can switch on:
 - **Auto Predictions** ("5★ in the next 10?") — needs Affiliate or Partner.
 - **Auto clips** of 5★ moments (only while live).
 
-## Your viewers' language
-Settings → Overlay → **Language**: the overlay, the session recap and the chat replies in
-English, Español, Português (Brasil), Français, Deutsch, 日本語, 한국어 or 简体中文. (The
-panel itself is in English.)
+## Languages
+**Your viewers' language** — Settings → Overlay → **Viewers' language**: the overlay, the
+session recap and the chat replies in English, Español, Português (Brasil), Français,
+Deutsch, 日本語, 한국어 or 简体中文.
+
+**Your own language** — Settings → App → **Panel language**: everything in this panel,
+including the tracker's messages, the pull log and error advice, in the same 8 languages.
+*Automatic* (the default) follows your Windows language. Two things stay in English for now:
+the "What's new" notes and the occasional notice sent from the developer.
 
 **The game in another language** works too: pulls are counted in any game language. The
 names of 5★s and "pulls available" are read from English game text, so with another game
 language they may stay blank.
 
 ## Integrations (Streamer.bot, Stream Deck, custom alerts)
-Other programs on your PC can follow your pity, pulls and 5★ live through a small
-read-only feed — see
+**Streamer.bot**, ready-made: Settings → **Streamer.bot & other tools** → **Copy the
+Streamer.bot code**, then follow the four steps shown there (about a minute). You get
+triggers like *5★ pulled*, *50/50 lost* and *Soft pity reached* for alerts, sounds and scene
+changes, plus variables such as `~pitySensePity~` for chat messages and text sources.
+
+Anything else on your PC (Stream Deck, custom alerts, your own scripts) can follow your
+pity, pulls and 5★ live through the same small read-only feed — see
 [INTEGRATIONS.md](https://github.com/MaleficZenkai/pity-sense-releases/blob/main/INTEGRATIONS.md).
 Nothing leaves your PC, and nothing a program sends can change your numbers.
 
