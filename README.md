@@ -78,6 +78,15 @@ Settings → Twitch extras → **Connect Twitch**. Then you can switch on:
 - **Auto Predictions** ("5★ in the next 10?") — needs Affiliate or Partner.
 - **Auto clips** of 5★ moments (only while live).
 
+## Your viewers' language
+Settings → Overlay → **Language**: the overlay, the session recap and the chat replies in
+English, Español, Português (Brasil), Français, Deutsch, 日本語, 한국어 or 简体中文. (The
+panel itself is in English.)
+
+**The game in another language** works too: pulls are counted in any game language. The
+names of 5★s and "pulls available" are read from English game text, so with another game
+language they may stay blank.
+
 ## Integrations (Streamer.bot, Stream Deck, custom alerts)
 Other programs on your PC can follow your pity, pulls and 5★ live through a small
 read-only feed — see
