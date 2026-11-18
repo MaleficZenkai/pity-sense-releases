@@ -16,7 +16,9 @@ never leaves the PC, and nothing a program sends to it changes Pity Sense.
 in v1 is renamed, removed or changes type. A new major version would come with a new `v`
 and the old one kept for a long overlap.
 
-Every event has `v`, `type` and `at` (ISO 8601 time, local clock).
+Every event has `v`, `type` and `at` (ISO 8601 time, local clock). Every event that has
+`game` also has `gameName` (e.g. `"Honkai: Star Rail"`), and every event that has `banner`
+also has `bannerName` (e.g. `"Character Warp"`) — the names an alert would show.
 
 ## Events
 
@@ -69,10 +71,32 @@ from the name it read, `false` when the streamer answered). Plus `game`, `banner
 
 ## Examples
 
-**Streamer.bot** — Add a *WebSocket Client* (Settings → Websocket Clients → Add):
-address `ws://127.0.0.1:47823/events`. In the *WebSocket Client Message* trigger, the
-JSON is in `%message%`; a C# action can `JsonConvert.DeserializeObject` it and, for
-example, fire an alert when `type == "five_star"`.
+### Streamer.bot (ready-made)
+One action, pasted once — no WebSocket client to set up, no JSON to handle:
+
+1. In Pity Sense: **Settings → Streamer.bot & other tools → Copy the Streamer.bot code**
+   (or take [`streamerbot/PitySense.cs`](streamerbot/PitySense.cs) from this page).
+2. In Streamer.bot: **Actions** → right-click → **Add**, name it `Pity Sense`.
+3. In that action: **Sub-Actions** → right-click → **Core → C# → Execute C# Code**. Paste
+   the code over what's there, tick **Precompile on application start**, then
+   **Save and Compile**.
+4. On any of your actions: **Triggers** → right-click → **Custom → Pity Sense**.
+
+| trigger | arguments for your sub-actions |
+|---|---|
+| 5★ pulled | `%name%` `%pity%` `%outcome%` `%bannerName%` `%gameName%` |
+| 50/50 won · 50/50 lost | `%name%` `%bannerName%` `%gameName%` `%byName%` |
+| Pull counted | `%pulls%` `%fourStars%` `%fiveStars%` `%pityBefore%` `%pity%` `%bannerName%` |
+| Soft pity reached | `%pity%` `%softPity%` `%hardPity%` `%guaranteed%` `%bannerName%` |
+| Pity changed | `%pity%` `%hardPity%` `%softPity%` `%guaranteed%` `%pullsAvailable%` `%bannerName%` |
+| Pull session started · ended | ended: `%pulls%` `%fourStars%` `%fiveStars%` `%won5050%` `%lost5050%` `%averagePity%` |
+| Connected · Disconnected | `%version%` |
+
+Every trigger also has `%pitySenseEvent%` and `%pitySenseJson%` (the event as sent). Global
+variables for text sources and chat messages: `~pitySensePity~`, `~pitySenseHardPity~`,
+`~pitySenseGuaranteed~`, `~pitySenseBanner~`, `~pitySensePullsAvailable~`,
+`~pitySenseLastFiveStar~` and more (the list is at the top of the code). The action finds
+Pity Sense's port by itself, reconnects when Pity Sense restarts, and only listens.
 
 **Node.js**
 ```js
