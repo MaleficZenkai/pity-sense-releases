@@ -38,8 +38,19 @@ inside a session are counted; anything that looks like a pull outside one is hel
 mistake. A session stays open until you end it, so a chat break mid-session never stops
 the counting.
 
+**The overlay is blank after starting OBS?** OBS was opened before Pity Sense and doesn't
+retry by itself: in OBS, double-click the Pity Sense source → *Refresh cache of current
+page*. Turn on *Start with Windows* (Pity Sense offers it) so it's always running first.
+
 **Pulling on a viewer's account?** Tick *Pulling on someone else's account* on the Live tab;
 Pity Sense ignores everything until you untick it.
+
+## The 50/50 and guarantees
+Pity Sense can't see a 50/50 you lost before you installed it, so for each banner it asks
+once (Get set up) whether your next 5★ is guaranteed — or fills it in from the game's own
+history. Until it knows, a featured 5★ isn't called a win: the panel asks **"a 50/50
+win, or were you guaranteed?"**. Any 5★'s result can be corrected later: *Last 5★ →
+Change*.
 
 ## Fixing a number
 *Live → Fix the numbers* lets you set the pity, the 50/50, add or remove pulls, and **Undo**
